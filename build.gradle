@@ -1,5 +1,5 @@
 plugins {
-    id 'java'
+    id 'java-library'
 }
 
 group 'guru.qa'
@@ -10,9 +10,12 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
+    testImplementation(
+            "com.codeborne:selenide:6.5.0",
+            "org.junit.jupiter:junit-jupiter:5.8.2"
+    )
 }
 
-test {
+tasks.withType(Test) {
     useJUnitPlatform()
 }
