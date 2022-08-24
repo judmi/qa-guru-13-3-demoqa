@@ -9,13 +9,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class StudentRegistrationFormTest {
-
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.browserSize = "1920x1080";
-    }
+public class StudentRegistrationFormTest extends TestBase {
 
     @Test
     void formTest() {
