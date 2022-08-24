@@ -1,4 +1,4 @@
-package qa_guru;
+package qaGuru;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -19,8 +19,6 @@ public class StudentRegistrationFormTest {
 
     @Test
     void formTest() {
-        String name = "Alex";
-
         open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
@@ -31,6 +29,14 @@ public class StudentRegistrationFormTest {
         $("[id=userEmail]").setValue("yulia.dmitrieva@yahoo.com");
         $("[id=gender-radio-2]").parent().click();
         $("[id=userNumber]").setValue("1234567890");
+        /* локаторы через id можно записывать через решетку $("#firstName")
+        $("#firstName").setValue("Yulia");
+        $("#lastName").setValue("Dmitrieva");
+        $("#userEmail").setValue("yulia.dmitrieva@yahoo.com");
+        $("#gender-radio-2").parent().click();
+        $("#userNumber").setValue("1234567890");
+         */
+
 
         //test date picker
         $("[id=dateOfBirthInput]").click();
@@ -48,7 +54,9 @@ public class StudentRegistrationFormTest {
 
         //file
         $("[id=uploadPicture]").uploadFile(new File(
-                "C:/Users/Julia/IdeaProjects/qa_guru/qa-guru-13-3-demoqa/src/test/resources/test.jpg"));
+                "src/test/resources/test.jpg")); //Нужно указывать относительный путь (от корня проекта), а не абсолютный (от корня пк)
+        // Еще можно сделать так:
+        //$("#uploadPicture").uploadFromClasspath("test.jpg");
 
         //address
         $("[id=currentAddress]").click();
