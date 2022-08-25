@@ -34,7 +34,7 @@ public class StudentRegistrationFormTestWithPageObjects extends BaseTest {
                 .setNumber(number);
 
 
-        registrationFormPage.setDateOfBirth("24", "October", "1994");
+        registrationFormPage.setDateOfBirth(day, month, year);
 
         registrationFormPage.setSubjects(subjects)
                 .setHobbies(hobbies);
