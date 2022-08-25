@@ -1,16 +1,13 @@
-package qaGuru;
+package tests;
 
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Keys;
-
-import java.io.File;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class StudentRegistrationFormTest extends TestBase {
+public class StudentRegistrationFormTest extends BaseTest {
 
     @Test
     void formTest() {
@@ -20,20 +17,12 @@ public class StudentRegistrationFormTest extends TestBase {
         executeJavaScript("$('#fixedban').remove()");
 
         //filling the fields
-        $("[id=firstName]").setValue("Yulia");
-        $("[id=lastName]").setValue("Dmitrieva");
-        $("[id=userEmail]").setValue("yulia.dmitrieva@yahoo.com");
-        $("[id=gender-radio-2]").parent().click();
-        //$("#genterWrapper").$(byText("Female")).click(); //best option
-        //$("[for=gender-radio-2]").click();
-        $("[id=userNumber]").setValue("1234567890");
-        /* локаторы через id можно записывать через решетку $("#firstName")
-        $("#firstName").setValue("Yulia");
+        $("#firstName").setValue("Yulia"); // or $("[id=firstName]").setValue("Yulia");
         $("#lastName").setValue("Dmitrieva");
         $("#userEmail").setValue("yulia.dmitrieva@yahoo.com");
-        $("#gender-radio-2").parent().click();
-        $("#userNumber").setValue("1234567890");
-         */
+        $("#genterWrapper").$(byText("Female")).click(); //or $("#gender-radio-2").parent().click();
+        $("[#userNumber]").setValue("1234567890");
+
 
 
         //test date picker
@@ -55,7 +44,6 @@ public class StudentRegistrationFormTest extends TestBase {
         //file
         //$("[id=uploadPicture]").uploadFile(new File(
         //        "src/test/resources/test.jpg")); //Нужно указывать относительный путь (от корня проекта), а не абсолютный (от корня пк)
-        // Еще можно сделать так:
         $("#uploadPicture").uploadFromClasspath("test.jpg");
 
         //address
