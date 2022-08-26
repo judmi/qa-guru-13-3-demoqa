@@ -111,14 +111,14 @@ public class RegistrationFormPage {
 
     public RegistrationFormPage setState(String value) {
         $("#state").click();
-        $("#stateCity-wrapper").$(byText("Rajasthan")).click();
+        $("#stateCity-wrapper").$(byText(value)).click();
 
         return this;
     }
 
     public RegistrationFormPage setCity(String value) {
         $("#city").click();
-        $("#stateCity-wrapper").$(byText("Jaipur")).click();
+        $("#stateCity-wrapper").$(byText(value)).click();
 
         return this;
     }
