@@ -1,5 +1,6 @@
 package tests;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -11,6 +12,7 @@ import static io.qameta.allure.Allure.step;
 public class StudentRegistrationFormTestWithPageObjects extends BaseTest {
 
     @Test
+    @Tag("demoqa")
     void formTest() {
 
         String firstName = "Yulia";
