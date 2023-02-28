@@ -149,7 +149,7 @@ allure serve build/allure-results
 
 
 ## Оповещения в Telegram
-По окончании сборки в Telegram-чат бот отправляет сообщение с результатами сборки.
+По окончании сборки бот отправляет сообщение с результатами сборки в Telegram-чат.
 
 Для оповещений используется библиотека [allure-notifications](https://github.com/qa-guru/allure-notifications).
 
