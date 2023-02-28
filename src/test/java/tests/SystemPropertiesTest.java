@@ -19,7 +19,7 @@ public class SystemPropertiesTest {
 
     @Test
     @Tag("hello")
-    void simplePropertyTes5() {
+    void simplePropertyTest1() {
         System.out.println("Hello, " + System.getProperty("some_text", "qa.guru"));
     }
 
