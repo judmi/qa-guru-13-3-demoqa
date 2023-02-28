@@ -137,9 +137,9 @@ allure serve build/allure-results
 ## Пример отчёта
 После окончания выполнения автотестов по каждому из них в отчёте доступны скриншоты, исходный код страницы, лог консоли браузера и видеозапись выполнения теста:
 
-![This is an image](/images/screenshots/allure-report.PNG)
-
 ![This is an image](/images/screenshots/allure-report-1.PNG)
+
+![This is an image](/images/screenshots/allure-report.PNG)
 
 
 Пример видеозаписи прохождения теста
